@@ -13,3 +13,37 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome";
+@import "facilities.scss";
+
+#topbar {
+  background: none no-repeat scroll 0 0 #73c71e;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+#sidebar {
+  position: fixed;
+  background-color: #3d4045;
+  height: 100%;
+  width: 50px;
+  margin-top: 50px;
+  color: white;
+}
+
+.sidebar-icon {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.navbar-brand {
+  background: url("/brandlogo.png") no-repeat scroll -58px 0px transparent !important;
+  background-size: 265px !important;
+  color: transparent;
+  margin-left: 15px;
+}
+
+.content {
+  margin-top: 70px;
+}

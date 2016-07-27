@@ -7,8 +7,22 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <%= yield %>
+    <div id="topbar">
+      <a class="navbar-brand" href="/">Comunidad Feliz</a>
+    </div>
+    <div id="sidebar">
+      <div class="sidebar-icon">
+        <i class="fa fa-lock fa-2x"></i>
+      </div>
+      <div class="sidebar-icon">
+        <i class="fa fa-building fa-2x"></i>
+      </div>
+    </div>
+    <div class="container">
+      <div class="content">
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>
