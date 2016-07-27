@@ -59,3 +59,5 @@ gem 'bootstrap-sass'
 gem 'simple_form'
 # Easy debug
 gem 'awesome_print', require:'ap'
+# Fontawesome
+gem 'font-awesome-rails'
