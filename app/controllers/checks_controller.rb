@@ -25,7 +25,6 @@ class ChecksController < ApplicationController
   # POST /checks.json
   def create
     @check = Check.new(check_params)
-
     respond_to do |format|
       if @check.save
         format.html { redirect_to @check, notice: 'Check was successfully created.' }
@@ -69,6 +68,6 @@ class ChecksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def check_params
-      params.require(:check).permit(:date, :cost)
+      params.require(:check).permit(:date, :cost, :facility_id)
     end
 end
