@@ -14,10 +14,10 @@ class FacilitiesController < ApplicationController
       if f.checks.length > 0
         last_check = f.checks.order('checks.date DESC').limit(1).first
         difference = (Time.zone.now.to_date - last_check.date.to_date).to_i
-        sum += difference > f.days_to_check ? difference : 0
+        sum += difference > f.days_to_check ? difference - f.days_to_check : 0
         summed += difference > f.days_to_check ? 1 : 0
         @over_10_days += difference > 10 ? 1 : 0;
-        @max_delay = difference > @max_delay ? difference : @max_delay
+        @max_delay = difference > @max_delay ? difference - f.days_to_check : @max_delay
       end
     end
     @average_delay = summed > 0 ? sum / summed : 0
