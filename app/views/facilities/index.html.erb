@@ -14,19 +14,19 @@
   <div class="col-md-3">
     <div>
       <strong>Media de atraso</strong>
-      <p><%= @communities.length %></p>
+      <p><%= @average_delay %></p>
     </div>
   </div>
   <div class="col-md-3">
     <div>
       <strong>Atraso sobre 10 días</strong>
-      <p><%= @communities.length %></p>
+      <p><%= @over_10_days %></p>
     </div>
   </div>
   <div class="col-md-3">
     <div>
       <strong>Máximo atraso</strong>
-      <p><%= @communities.length %></p>
+      <p><%= @max_delay %></p>
     </div>
   </div>
 </div>
@@ -38,3 +38,5 @@
 <div class="outer">
   <div class="inner little">Histórico de Gastos de Mantención y Ranking de Administradores</div>
 </div>
+
+<a href="/checks" class="btn btn-default">Ingresar nuevo chequeo</a>
