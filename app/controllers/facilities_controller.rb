@@ -5,6 +5,11 @@ class FacilitiesController < ApplicationController
   # GET /facilities.json
   def index
     @facilities = Facility.all
+    @communities = (@facilities.map { |f| f.community }).uniq
+  end
+
+  def facilities
+    @facilities = Facility.all
   end
 
   # GET /facilities/1
@@ -69,6 +74,6 @@ class FacilitiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def facility_params
-      params.require(:facility).permit(:name, :community)
+      params.require(:facility).permit(:name, :community, :days_to_check)
     end
 end
