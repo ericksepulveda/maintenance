@@ -32,6 +32,11 @@
   color: white;
 }
 
+.container-fluid {
+  margin-left: 50px;
+  padding: 0;
+}
+
 .sidebar-icon {
   text-align: center;
   margin: 20px auto;
@@ -45,5 +50,6 @@
 }
 
 .content {
-  margin-top: 70px;
+  margin-top: 50px;
+  padding-top: 1px;
 }
