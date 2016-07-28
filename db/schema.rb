@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160728011425) do
+ActiveRecord::Schema.define(version: 20160728013600) do
 
   create_table "checks", force: :cascade do |t|
     t.date     "date"
     t.integer  "cost"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "facility_id"
   end
 
   create_table "facilities", force: :cascade do |t|
