@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :checks
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :facilities
   get '/management', to: 'facilities#facilities'
