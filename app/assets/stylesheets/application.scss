@@ -21,6 +21,7 @@
   position: fixed;
   width: 100%;
   z-index: 999;
+  color: transparent;
 }
 
 #sidebar {
@@ -52,4 +53,8 @@
 .content {
   margin-top: 50px;
   padding-top: 1px;
+}
+
+a, a:hover {
+  color: inherit;
 }
